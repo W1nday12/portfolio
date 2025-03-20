@@ -1,52 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
+/* Общие стили */
 body {
-    font-family: 'Inter', sans-serif; /* Устанавливаем шрифт */
-    background-color: #f5f5f5; /* Фон страницы */
-    color: #000; /* Цвет текста */
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #000;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
+/* Шапка */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 80px;
+    padding: 20px 40px;
 }
 
-.contact-btn {
-    padding: 10px 25px;
-    border: 1px solid black;
-    background: transparent;
-    border-radius: 25px; /* Делаем кнопку закруглённой */
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
+/* Логотип */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-main {
-    max-width: 800px;
-    margin: 120px 0 0 80px; /* Двигаем текст левее и ниже */
-}
-
-h2 {
-    font-size: 50px; /* Увеличиваем размер заголовка */
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-span {
-    display: inline-block;
+/* Кнопка "Contact" */
+.contact-button {
     border: 2px solid black;
-    border-radius: 50%;
-    padding: 5px 15px;
-    font-size: 28px;
+    background: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
 }
 
-p {
-    font-size: 18px; /* Увеличиваем размер шрифта */
-    font-weight: 300;
-    max-width: 600px;
-    line-height: 1.6;
+/* Основной контент */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Опускаем вниз */
+    padding-bottom: 20px; /* Чуть меньше отступ */
+    padding-left: 40px;
+}
+
+/* Основной заголовок */
+.main-text {
+    font-size: 6rem;  /* Чуть уменьшен */
+    font-weight: bold;
+    max-width: 1200px;
+    line-height: 1.1;
+}
+
+/* Оформление "&" */
+.circle {
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 50%;
+    padding: 10px 20px;
+}
+
+/* Убираем большой овал */
+.underline::after {
+    display: none;
+}
+
+.description {
+    font-size: 2.2rem;  /* Увеличенный шрифт */
+    max-width: 750px;  /* Расширил контейнер */
+    color: #333;
+    margin-top: 10px; /* Чуть ближе к заголовку */
+    line-height: 1.4; /* Оптимальный интервал */
 }

@@ -1,27 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #000;
-    text-align: center;
-    padding: 50px;
+    font-family: 'Inter', sans-serif; /* Устанавливаем шрифт */
+    background-color: #f5f5f5; /* Фон страницы */
+    color: #000; /* Цвет текста */
+    margin: 0;
+    padding: 0;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 40px 80px;
 }
+
 .contact-btn {
-    padding: 10px 20px;
+    padding: 10px 25px;
     border: 1px solid black;
     background: transparent;
+    border-radius: 25px; /* Делаем кнопку закруглённой */
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
 }
+
+main {
+    max-width: 800px;
+    margin: 120px 0 0 80px; /* Двигаем текст левее и ниже */
+}
+
 h2 {
-    font-size: 36px;
+    font-size: 50px; /* Увеличиваем размер заголовка */
+    font-weight: 600;
+    margin-bottom: 10px;
 }
+
 span {
-    border: 1px solid black;
+    display: inline-block;
+    border: 2px solid black;
     border-radius: 50%;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px; /* Увеличиваем размер шрифта */
+    font-weight: 300;
+    max-width: 600px;
+    line-height: 1.6;
 }

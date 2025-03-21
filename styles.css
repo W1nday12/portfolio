@@ -1,75 +1,80 @@
-/* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #000;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    background: #f8f8f8;
+    text-align: center;
 }
 
-/* Шапка */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+    padding: 20px;
 }
 
-/* Логотип */
 .logo {
-    font-size: 1.5rem;
     font-weight: bold;
 }
 
-/* Кнопка "Contact" */
 .contact-button {
-    border: 2px solid black;
-    background: transparent;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 20px;
-}
-
-/* Основной контент */
-main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Опускаем вниз */
-    padding-bottom: 20px; /* Чуть меньше отступ */
-    padding-left: 40px;
-}
-
-/* Основной заголовок */
-.main-text {
-    font-size: 6rem;  /* Чуть уменьшен */
-    font-weight: bold;
-    max-width: 1200px;
-    line-height: 1.1;
-}
-
-/* Оформление "&" */
-.circle {
     display: inline-block;
-    border: 3px solid black;
-    border-radius: 50%;
     padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
-/* Убираем большой овал */
-.underline::after {
+.contact-button:hover {
+    background: black;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.and-symbol {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 40px;
+}
+
+.bio-text {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Стили модального окна */
+.modal {
     display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.description {
-    font-size: 2.2rem;  /* Увеличенный шрифт */
-    max-width: 750px;  /* Расширил контейнер */
-    color: #333;
-    margin-top: 10px; /* Чуть ближе к заголовку */
-    line-height: 1.4; /* Оптимальный интервал */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
